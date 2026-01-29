@@ -1,1 +1,1 @@
-/*# sourceMappingURL=main.css.map */
+body{background-image:url(../images/bg.jpg)}#character-box ul{list-style:none;display:flex;flex-wrap:wrap}#character-box ul li{background-color:hsla(0,0%,100%,.4235294118);border-radius:150px;margin:30px;height:210px;width:210px;text-align:center;display:flex;flex-direction:column;justify-content:space-between}#character-box ul li a{text-align:center;font-size:18px;font-weight:bold;margin-top:10px;color:#fff}#character-box ul li img{text-align:center;border-radius:200px;border:3px solid #fff}/*# sourceMappingURL=main.css.map */

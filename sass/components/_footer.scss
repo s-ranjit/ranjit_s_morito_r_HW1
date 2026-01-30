@@ -1,0 +1,10 @@
+@use '../abstracts';
+footer {
+    
+     color: abstracts.$primary-color;
+     text-align: center;
+     p {
+        margin: 70px 0 60px 0;
+        font-size: 16px;
+     }
+}

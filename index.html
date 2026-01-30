@@ -1,15 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>Star Wars Charactor-Movie List</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="css/grid.css" rel="stylesheet">
-    <link href="css/main.css" rel="stylesheet">
-    <script defer src="js/main.js"></script>
-  </head>
-  <body>
-    
-    
-  </body>
+
+<head>
+  <title>Star Wars Character-Movie List</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="images/starwars_favicon.jpg" type="image/png">
+  <link href="css/grid.css" rel="stylesheet">
+  <link href="css/main.css" rel="stylesheet">
+  <script defer src="js/main.js"></script>
+</head>
+
+<body>
+
+  <h1 class="hidden">Star war</h1>
+  <div>
+    <section class="full-width-grid-con">
+      <h2 class="hidden">Main Navigation</h2>
+      <header id="main-header" class="full-width-grid-con">
+        <div id="logo" class="col-start-1 col-end-2 m-col-start-1 m-col-end-3">
+          <a href="index.html"><img src="images/starwars-logo.png" alt="Logo"></a>
+        </div>
+        <input type="checkbox" id="hamburger">
+        <label for="hamburger" id="ham-burger">
+          <img src="images/ham-burger-menu.svg" alt="Menu">
+        </label>
+        <div id="main-nav" class="grid-con">
+          <nav class="burger-con m-col-start-3 m-col-end-11 l-col-start-3 l-col-end-9">
+            <ul class="">
+              <li><a href="#home">Home</a></li>
+              <li><a href="#">Characters</a></li>
+              <li><a href="#">Movies</a></li>
+              <li><a href="#">About</a></li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+    </section>
+  </div>
+
+  <div id="characters" class="grid-con">
+    <section class="col-span-full">
+      <div id="character-box">
+        <!-- dynamically generated list goes here -->
+      </div>
+    </section>
+  </div>
+
+  <div id="lightbox" class="grid-con">
+      <section class="col-span-full" id="movie-con">
+        <!-- <button id="close-lightbox">X</button> -->
+        <template id="movie-template">
+          <div class="movie-card">
+            <img class="movie-poster">
+            <h2 class="movie-title"></h2>
+            <p class="movie-date"></p>
+            <p class="movie-opening-crawl"></p>
+          </div>
+        </template>
+      </section>
+    </div>
+
+</body>
+
 </html>

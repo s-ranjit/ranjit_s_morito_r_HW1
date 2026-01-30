@@ -9,6 +9,7 @@
     const baseUrl = `https://swapi.info/api/`;
    
     function getCharacters () {
+        characterBox.classList.add("spinner");
         fetch(`${baseUrl}people`)
         .then((res) => res.json())
         .then(function(res) {
@@ -33,6 +34,7 @@
                 li.appendChild(a);
                 ul.appendChild(li);
             }
+            characterBox.classList.remove("spinner");
         })
         .then(function () {
             const links = document.querySelectorAll("#character-box ul li a");

@@ -9,6 +9,7 @@
     const baseUrl = `https://swapi.info/api/`;
    
     function getCharacters () {
+        characterBox.classList.add("spinner");
         fetch(`${baseUrl}people`)
         .then((res) => res.json())
         .then(function(res) {
@@ -33,6 +34,7 @@
                 li.appendChild(a);
                 ul.appendChild(li);
             }
+            characterBox.classList.remove("spinner");
         })
         .then(function () {
             const links = document.querySelectorAll("#character-box ul li a");
@@ -41,7 +43,10 @@
             link.addEventListener("click",getMovies);
             })
         })
-        .catch((error) => console.error(error))
+        .catch(function(err){
+            console.log(err);
+            characterBox.innerHTML = "<p>Oops! The characters went off to play hide-and-seek.</p>";
+        });
     }
 
     function getMovies (e) {
@@ -72,10 +77,9 @@
                 movieCon.appendChild(clone);
             })
             .catch(function(err){
-            // works for dev
             console.log(err);
-            // we should write a meaningful message to the DOM)
-            });
+            movieCon.innerHTML = "<p>Oops! The movies went off to play hide-and-seek.</p>";
+        });
         })
 }
 

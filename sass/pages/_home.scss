@@ -1,12 +1,29 @@
+@use '../abstracts';
 body {
     background-image: url(../images/bg.jpg);
+    font-family: "Montserrat", sans-serif;
+}
+.title {
+    margin: 200px auto 50px auto;
+    color: abstracts.$primary-color;
+    text-align: center;
+    font-size: 23px;
+    font-family: "StarJedi", sans-serif;
+    letter-spacing: 5px;
+}
+.info {
+    color: abstracts.$secondary-color;
+     text-align: center;
+     font-size: 18px;
 }
 
 #character-box ul {
+    position: relative;
     margin-top: 100px;
     list-style: none;
     display: flex;
     flex-wrap: wrap;
+    margin-left: 50px;
 
     li {
         background-color: #ffffff6c;
@@ -15,25 +32,57 @@ body {
         height: 210px;
         width: 210px;
         text-align: center;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-
+       
         a {
             text-align: center;
             font-size: 18px;
             font-weight: bold;
             margin-top: 10px;
             color: #fff;
+            cursor: pointer;
         }
 
         img {
             text-align: center;
             border-radius: 200px;
-            border: 3px solid #fff;
+            border: 2px solid #fff;
+            width: 210px;
+            height: 210px;
+            object-fit: cover;
         }
     }
+}
+.movie-card {
+    margin-top: 30px;
+    .movie-title {
+        font-size: 30px;
+        font-weight: bold;
+        margin: 20px 0 20px 0; 
+         color: abstracts.$primary-color; 
+    }
+    h3,p{
+       color: abstracts.$secondary-color;
+        margin: 20px 0 20px 0;
+        font-size: 18px;
+    }
+}
+.movie-poster {
+  width: 250px;
 
+ 
+}
+@media screen and (min-width:768px) {
+    #character-box ul {
+    margin-left: 0;
+    }
+    .title {
+    font-size: 27px;
+}
+.info {
+    color: abstracts.$secondary-color;
+     text-align: center;
+     font-size: 25px;
+}
 }
 
 #lightbox {

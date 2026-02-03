@@ -28,7 +28,7 @@
         <div id="main-nav" class="grid-con">
           <nav class="burger-con m-col-start-3 m-col-end-11 l-col-start-3 l-col-end-9">
             <ul class="">
-              <li><a href="#home">Home</a></li>
+              <li><a href="index.html">Home</a></li>
               <li><a href="#">Characters</a></li>
               <li><a href="#">Movies</a></li>
               <li><a href="#">About</a></li>
@@ -39,15 +39,24 @@
     </section>
   </div>
 
-  <div id="characters" class="grid-con">
-    <section class="col-span-full">
-      <div id="character-box">
-        <!-- dynamically generated list goes here -->
+  <main>
+    <section class="grid-con">
+      <div class="col-span-full m-col-span-full l-col-span-full ">
+        <h2 class="title">Welcome to Star Wars Character-Movie List</h2>
+        <p class="info"> Choose your favorite character and discover one of their most
+          iconic movies! </p>
       </div>
     </section>
-  </div>
 
-  <div id="lightbox" class="grid-con">
+    <div id="characters" class="grid-con">
+      <section class="col-span-full">
+        <div id="character-box">
+          <!-- dynamically generated list goes here -->
+        </div>
+      </section>
+    </div>
+
+    <div id="lightbox" class="grid-con">
       <section class="col-span-full" id="movie-con">
         <!-- <button id="close-lightbox">X</button> -->
         <template id="movie-template">
@@ -60,7 +69,14 @@
         </template>
       </section>
     </div>
+  </main>
 
+  <footer class="grid-con">
+    <p class="col-span-full m-col-span-full l-col-span-full">&copy; 2026 Star Wars Character Guide. All rights reserved.
+      <br> Design &
+      Developed by: <b>Rin Morito & Situ Ranjit</b>
+    </p>
+  </footer>
 </body>
 
 </html>

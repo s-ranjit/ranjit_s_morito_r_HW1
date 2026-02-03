@@ -29,29 +29,44 @@ body {
     li {
         background-color: #ffffff6c;
         border-radius: 150px;
-        margin: 30px;
+        margin: 36px;
         height: 210px;
         width: 210px;
         text-align: center;
+         transition: all  0.3s ease;
        
+        &:hover {
+            transform: scale(1.1); 
+            cursor: pointer;
+        }
         a {
             text-align: center;
             font-size: 18px;
-            font-weight: bold;
+            font-weight: abstracts.$font-heavy;
             margin-top: 10px;
-            color: #fff;
+            color: abstracts.$secondary-color;
             cursor: pointer;
             text-decoration: none;
+
+            &:hover {
+                color: abstracts.$primary-color;
+            }
+           
         }
 
         img {
             text-align: center;
             border-radius: 200px;
-            border: 2px solid #fff;
+            border: 2px solid abstracts.$secondary-color;
             width: 210px;
             height: 210px;
             object-fit: cover;
+
+            &:hover {
+            border: 2px solid abstracts.$primary-color;
         }
+        }
+       
     }
 }
 
@@ -92,7 +107,7 @@ body {
     
     .movie-title {
         text-align: center;
-        font-weight: bold;
+        font-weight: abstracts.$font-heavy;
     }
     
     
@@ -116,9 +131,9 @@ body {
         font-size: 18px;
         cursor: pointer;
         background-color: transparent;
-        border: 2px solid #fff;
+        border: 2px solid abstracts.$secondary-color;
         border-radius: 50px;
-        color: #fff;
+        color: abstracts.$secondary-color;
 }
 
 

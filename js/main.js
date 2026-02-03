@@ -27,10 +27,12 @@
                 const a = document.createElement("a");
                 const img = document.createElement("img");
 
+                a.href = "#";
                 a.textContent = character.name;
                 a.dataset.movie = character.films;
                 img.src =`images/character${i+1}.jpg`;
-                li.appendChild(img);
+                
+                a.prepend(img);
                 li.appendChild(a);
                 ul.appendChild(li);
             }
@@ -75,13 +77,25 @@
                 movieOpeningCrawl.innerHTML = movie.opening_crawl;
 
                 movieCon.appendChild(clone);
+                movieCon.scrollIntoView({ behavior: 'smooth', block: 'start'});
             })
             .catch(function(err){
             console.log(err);
             movieCon.innerHTML = "<p>Oops! The movies went off to play hide-and-seek.</p>";
         });
         })
+        
 }
 
     getCharacters();
+
+    // back to top button
+    const backToTopButton = document.querySelector("#back-to-top");
+    const top = document.querySelector("#characters");
+
+    function scrollToTop () {
+        top.scrollIntoView({ behavior: 'smooth', block: 'start'});
+    }
+
+    backToTopButton.addEventListener("click", scrollToTop);
 })();

@@ -1,4 +1,13 @@
-$heading-font-family: 'Raleway', sans-serif;
-$body-font-family: 'Raleway', sans-serif;
-$font-regular: 400; 
-$font-heavy: 900;
+@font-face {
+  font-family: "StarJedi";
+  src: url("../fonts/Starjedi.woff2") format("woff2"),
+       url("../fonts/Starjedi.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Montserrat';
+  src: url('../fonts/Montserrat-Thin.woff2') format('woff2'),
+       url('../fonts/Montserrat-Thin.woff') format('woff');
+  font-weight: 100 900;
+}

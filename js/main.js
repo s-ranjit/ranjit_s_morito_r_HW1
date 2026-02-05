@@ -37,6 +37,14 @@
                 ul.appendChild(li);
             }
             characterBox.classList.remove("spinner");
+
+            gsap.from("#character-box ul", {
+                opacity: 0,
+              y: 30,
+              duration: 1,
+              ease: "power2.out",
+              stagger: 3
+            })
         })
         .then(function () {
             const links = document.querySelectorAll("#character-box ul li a");

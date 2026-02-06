@@ -2,18 +2,26 @@
 <html lang="en">
 
 <head>
-  <title>Star Wars Character-Movie List</title>
+  <title>Star Wars API</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" href="images/starwars_favicon.jpg" type="image/png">
   <link href="css/grid.css" rel="stylesheet">
   <link href="css/main.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+  <!-- link to greensock main library -->
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+  <!-- link to greensock scroll trigger library -->
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
   <script defer src="js/main.js"></script>
 </head>
 
 <body>
 
-  <h1 class="hidden">Star war</h1>
+  <h1 class="hidden">Star Wars API</h1>
   <div>
     <section class="full-width-grid-con">
       <h2 class="hidden">Main Navigation</h2>
@@ -42,7 +50,7 @@
   <main>
     <section class="grid-con">
       <div class="col-span-full m-col-span-full l-col-span-full ">
-        <h2 class="title">Welcome to Star Wars Character-Movie List</h2>
+        <h2 class="title">Welcome to Star Wars <span class="title"> Character-Movie List</span></h2>
         <p class="info"> Choose your favorite character and discover one of their most
           iconic movies! </p>
       </div>
@@ -50,6 +58,7 @@
 
     <div id="characters" class="grid-con">
       <section class="col-span-full">
+        <h2 class="hidden">Characters</h2>
         <div id="character-box">
           <!-- dynamically generated list goes here -->
         </div>
@@ -58,21 +67,30 @@
 
     <div id="lightbox" class="grid-con">
       <section class="col-span-full" id="movie-con">
+        <h2 class="hidden">Movie Details</h2>
         <!-- <button id="close-lightbox">X</button> -->
         <template id="movie-template">
-          <div class="movie-card">
-            <img class="movie-poster">
-            <h2 class="movie-title"></h2>
-            <p class="movie-date"></p>
-            <p class="movie-opening-crawl"></p>
+          <div class="movie-con">
+            <div class="poster">
+              <img class="movie-poster">
+            </div>
+            <div class="movie-text">
+              <h2 class="movie-title"></h2>
+              <p class="movie-date"></p>
+              <p class="movie-opening-crawl"></p>
+            </div>
           </div>
         </template>
       </section>
     </div>
+
+    <button id="back-to-top" aria-label="Back to top">↑</button>
   </main>
 
   <footer class="grid-con">
-    <p class="col-span-full m-col-span-full l-col-span-full">&copy; 2026 Star Wars Character Guide. All rights reserved.
+    <h3 class="hidden">Footer Info</h3>
+    <p class=" footer col-span-full m-col-span-full l-col-span-full">&copy; 2026 Star Wars Character Guide. All rights
+      reserved.
       <br> Design &
       Developed by: <b>Rin Morito & Situ Ranjit</b>
     </p>

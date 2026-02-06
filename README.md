@@ -1,6 +1,8 @@
 ## 🌟 Star Wars Character & Movie Guide
 This website is an interactive Star Wars character and movie guide that uses the Star Wars API. Character and movie data is loaded dynamically using AJAX and the Fetch API.🚀
 
+![star wars api](images/starwars_banner.png)
+
 ## 📑 Table of Contents
 - [Characters](#characters)  
 - [Movies](#movies)  
